@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<head>
+  <title><h1>Fake Review Monitoring System</h1></title>
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+
+      background-image: url(sunit.jpg);
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ddd;
+      font-size: 40px;
+      
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-top: 80px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group textarea {
+      width: 100%;
+      height: 100px;
+      resize: vertical;
+    }
+
+    .form-group input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #383eef;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      margin-left: 133px;
+      margin-top: 20px;
+      border-radius: 9px;
+    }
+
+    .form-group input[type="submit"]:hover {
+      background-color: #170651;
+      
+    }
+
+    .message {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+    }
+
+    .review-output {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fake Review Monitoring System</h1>
+  <div class="container">
+    <form id="reviewForm">
+      <div class="form-group">
+        <label for="review">Leave a Review:</label>
+        <textarea id="review" name="review" required></textarea>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Submit Review">
+      </div>
+    </form>
+    <div id="message" class="message" style="display: none;"></div>
+    <div id="reviewOutput" class="review-output" style="display: none;"></div>
+  </div>
+
+  <script>
+    document.getElementById("reviewForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var review = document.getElementById("review").value;
+
+      
+      var messageDiv = document.getElementById("message");
+      messageDiv.style.display = "block";
+      messageDiv.innerHTML = "Thank you for your review!";
+      
+    //  itha display kela
+      var reviewOutputDiv = document.getElementById("reviewOutput");
+      reviewOutputDiv.style.display = "block";
+      reviewOutputDiv.innerHTML = "<strong>Review Output:</strong><br>" + review;
+    });
+  </script>
+</body>
+</html>
